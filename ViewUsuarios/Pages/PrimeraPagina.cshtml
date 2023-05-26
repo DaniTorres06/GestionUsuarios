@@ -1,0 +1,27 @@
+﻿@page
+@model ViewUsuarios.Pages.PrimeraPaginaModel
+@{
+    ViewData["Title"] = "Primera pagina";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Priemer pagina usuarios</a>.</p>
+    <form method="post" asp-action="EnviarFormulario">
+    <div>
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" />
+    </div>
+    <div>
+        <label for="FechaNacimiento">Fecha nacimiento:</label>
+        <input type="text" id="FechaNacimiento" name="FechaNacimiento" />
+    </div>
+    <div>
+        <label for="Sexo">Sexo:</label>
+        <input type="text" id="Sexo" name="Sexo" />
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+
+</div>
+

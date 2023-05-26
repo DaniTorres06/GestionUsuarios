@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Primera pagina";
+}
+@model UsuariosMVC.Models.DTOs.UsuariosDTO
+
+
+<h1>Usuario</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" asp-for="Nombre">
+
+        <label for="FechaNacimiento" class="form-label">Fecha de nacimiento</label>
+        <input type="date" class="form-control" id="fechaNacimiento" asp-for="FechaNacimiento" value="2017-06-01">
+
+        <label for="Sexo" class="form-label">Sexo</label>
+        <!--<input type="text" class="form-control" id="sexo" asp-for="Sexo"> -->
+        <select asp-for="Sexo" class="form-control">
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+        </select>
+
+    </div>
+    <button type="submit" class="btn btn-primary" >Enviar</button>
+    
+</form>

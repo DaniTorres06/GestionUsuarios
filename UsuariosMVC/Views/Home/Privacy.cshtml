@@ -1,0 +1,32 @@
+﻿@model List<UsuariosMVC.Models.DTOs.UsuariosDTO>
+
+<!-- Código del formulario existente -->
+<hr />
+<h1>Usuario consulta</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Nombre</th>
+            <th>Fecha nacimiento</th>
+            <th>Sexo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var dato in Model)
+    {
+        <tr>
+            <td> @Html.DisplayFor(d=>dato.Nombre) </td>
+            <td> @Html.DisplayFor(d=>dato.FechaNacimiento) </td>
+            <td> @Html.DisplayFor(d=>dato.Sexo) </td>
+            <td>
+                    
+                <a class="btn btn-primary" asp-action="Edit" asp-controller="Home" asp-route-id="@dato.Id" role="button">Editar</a>
+                <a class="btn btn-primary" asp-action="Eliminar" asp-controller="Home" asp-route-id="@dato.Id" role="button">Eliminar</a>
+                </td>
+        </tr>
+        }
+        </tbody>
+</table>
